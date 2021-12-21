@@ -1,5 +1,3 @@
-
-
 object ApplicationId {
     val id = "com.mmi.testdemo"
 }
@@ -23,7 +21,7 @@ object Releases {
  * Arranged alphabetically
  */
 object Versions {
-    val appCompat = "1.2.0"
+    val appCompat = "1.4.0"
     val androidTestRunner = "1.2.0"
     val androidJunit = "4.+"
     val buildTool = "29.0.2"
@@ -44,7 +42,7 @@ object Versions {
     val minSdk = 21
     val legacyVersion = "1.0.0"
     val logginInterceptor = "4.7.2"
-    val materialDesignVersion = "1.0.0"
+    val materialDesignVersion = "1.4.0"
     val moshiVersion = "1.11.0"
     val nav = "2.3.1"
     val okHttp = "3.12.1"
@@ -66,11 +64,13 @@ object Libraries {
     // Dagger core
     val dagger2 = "com.google.dagger:dagger:${Versions.dagger}"
     val daggerCompiler = "com.google.dagger:dagger-compiler:${Versions.dagger}"
+    val daggerAndroidSupportCompiler = "com.google.dagger:dagger-android-processor:${Versions.dagger}"
 
     // RETROFIT
     val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     val retrofitMoshiConverter = "com.squareup.retrofit2:converter-moshi:${Versions.retrofitMoshi}"
-    val httpLoggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.logginInterceptor}"
+    val httpLoggingInterceptor =
+        "com.squareup.okhttp3:logging-interceptor:${Versions.logginInterceptor}"
     val okhttp = "com.squareup.okhttp3:okhttp:${Versions.okHttp}"
 
     // MOSHI
@@ -79,15 +79,17 @@ object Libraries {
 
     // VIEWS AND ANIMATIONS
     val shapeImage = "com.github.siyamed:android-shape-imageview:${Versions.shapeImageVersion}"
-    val glide =  "com.github.bumptech.glide:glide:${Versions.glideVersion}"
+    val glide = "com.github.bumptech.glide:glide:${Versions.glideVersion}"
     val glideCompiler = "com.github.bumptech.glide:compiler:${Versions.glideVersion}"
     val svgDecoder = "com.caverock:androidsvg:${Versions.svgDecoderVersion}"
 }
 
 object KotlinLibraries {
     val kotlin = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlinVersion}"
-    val coreKotlinCoroutine = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.kotlinCoroutine}"
-    val androidKotlinCoroutine = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.kotlinCoroutine}"
+    val coreKotlinCoroutine =
+        "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.kotlinCoroutine}"
+    val androidKotlinCoroutine =
+        "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.kotlinCoroutine}"
 }
 
 object AndroidLibraries {
@@ -116,6 +118,7 @@ object AndroidLibraries {
     // ROOM
     val room = "androidx.room:room-runtime:${Versions.roomVersion}"
     val roomCompiler = "androidx.room:room-compiler:${Versions.roomVersion}"
+
     // optional - Kotlin Extensions and Coroutines support for Room
     val roomKtx = "androidx.room:room-ktx:${Versions.roomVersion}"
 

@@ -4,6 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/StudioProjects/TestDemo/app/src/main/res/layout/activity_main.xml" value="0.2957427536231884" />
+        <entry key="..\:/StudioProjects/TestDemo/app/src/main/res/layout/competition_fixtures_list_item.xml" value="0.2887323943661972" />
+        <entry key="..\:/StudioProjects/TestDemo/app/src/main/res/layout/fragment_today_fixtures.xml" value="0.13355048859934854" />
+        <entry key="..\:/StudioProjects/TestDemo/common/src/main/res/layout/progress_dialog.xml" value="0.2957427536231884" />
       </map>
     </option>
   </component>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Football Fixtures</string>
+
+    <string name="title_fixtures">Fixtures</string>
+
+    <string name="retry">Retry</string>
+    <string name="no_data_available">No data available</string>
+
+</resources>
