@@ -1,0 +1,35 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+apply from: '../commons.gradle'
+
+android {
+
+    defaultConfig {
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+
+}
+
+dependencies {
+    implementation AndroidLibraries.appCompat
+    implementation AndroidLibraries.constraintLayout
+    implementation AndroidLibraries.fragmentKtx
+    implementation AndroidLibraries.fragment
+    implementation AndroidLibraries.navigation
+    implementation AndroidLibraries.navigationFrag
+
+    implementation Libraries.glide
+    kapt Libraries.glideCompiler
+    implementation Libraries.svgDecoder
+
+    implementation AndroidLibraries.lifecycleViewModel
+
+    implementation Libraries.dagger2
+    kapt Libraries.daggerCompiler
+
+}
