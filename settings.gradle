@@ -10,3 +10,7 @@ rootProject.name = "TestDemo"
 include ':app'
 
 include ':common'
+include ':domain-layer'
+include ':data-layer'
+include ':core'
+include ':presentation'

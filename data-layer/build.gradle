@@ -1,0 +1,46 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+apply from: '../commons.gradle'
+
+android {
+
+
+
+    defaultConfig {
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", 'API_KEY', '"577736ae699847608403642af0b9e6c1"'
+    }
+
+}
+
+dependencies {
+
+    implementation project(path: ':domain-layer')
+    implementation project(path: ':common')
+
+
+    implementation Libraries.retrofit
+    api Libraries.retrofitMoshiConverter
+    api Libraries.httpLoggingInterceptor
+    implementation Libraries.okhttp
+
+    implementation Libraries.dagger2
+    kapt Libraries.daggerCompiler
+
+    implementation AndroidLibraries.lifecycleViewModel
+    implementation AndroidLibraries.lifecycleExtensions
+    implementation AndroidLibraries.lifecycleLivedata
+    kapt AndroidLibraries.lifecycleCompile
+
+    implementation Libraries.moshiKotlin
+    kapt Libraries.moshiKotlinCodegen
+
+    implementation AndroidLibraries.room
+    implementation AndroidLibraries.roomKtx
+    kapt AndroidLibraries.roomCompiler
+
+}
