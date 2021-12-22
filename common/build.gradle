@@ -29,7 +29,7 @@ dependencies {
 
     implementation AndroidLibraries.lifecycleViewModel
 
-    implementation Libraries.dagger2
+    implementation Libraries.dagger
     kapt Libraries.daggerCompiler
 
 }

@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-android-extensions'
     id 'kotlin-kapt'
 }
 
@@ -60,7 +61,14 @@ dependencies {
     implementation AndroidLibraries.navigation
     implementation AndroidLibraries.navigationFrag
 
-    implementation Libraries.dagger2
-    kapt Libraries.daggerCompiler
+
+    //dagger with android support
+    implementation Libraries.dagger
+    implementation Libraries.daggerAndroid
+    implementation Libraries.daggerAndroidSupport
     kapt Libraries.daggerAndroidSupportCompiler
+    kapt Libraries.daggerCompiler
+
+
+
 }

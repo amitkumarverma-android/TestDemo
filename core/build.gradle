@@ -30,8 +30,13 @@ dependencies {
     implementation project(path: ':data-layer')
     implementation project(path: ':domain-layer')
 
-    implementation Libraries.dagger2
+    //dagger with android support
+    implementation Libraries.dagger
+    implementation Libraries.daggerAndroid
+    implementation Libraries.daggerAndroidSupport
+    kapt Libraries.daggerAndroidSupportCompiler
     kapt Libraries.daggerCompiler
+
     implementation AndroidLibraries.fragment
     implementation AndroidLibraries.fragmentKtx
 

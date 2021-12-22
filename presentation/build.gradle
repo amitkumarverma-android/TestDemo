@@ -29,7 +29,7 @@ dependencies {
     kapt Libraries.glideCompiler
     implementation Libraries.svgDecoder
 
-    implementation Libraries.dagger2
+    implementation Libraries.dagger
     kapt Libraries.daggerCompiler
 
 }
