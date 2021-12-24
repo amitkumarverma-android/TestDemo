@@ -1,6 +1,7 @@
 package com.mmi.core.di.components
 
 import android.content.Context
+import com.mmi.core.MainApplication
 import com.mmi.core.di.modules.CoreModule
 import com.mmi.data.di.DataModule
 import com.mmi.domain.repository.CompetitionsRepository
@@ -17,6 +18,8 @@ interface CoreComponent {
     interface Factory {
         fun create(@BindsInstance context: Context): CoreComponent
     }
+
+
 
     val competitionsRepository: CompetitionsRepository
 

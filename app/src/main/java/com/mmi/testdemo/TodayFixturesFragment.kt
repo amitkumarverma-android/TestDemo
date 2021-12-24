@@ -11,17 +11,21 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mmi.common.network.NetworkStatus
 import com.mmi.core.coreComponent
+
+
 import com.mmi.presentation.models.MatchResponse
 import com.mmi.presentation.utils.Utilities.getCurrentDate
 import com.mmi.presentation.utils.Utilities.hasInternetConnection
 import com.mmi.presentation.viewmodels.CompetitionsViewModel
+
 import com.mmi.testdemo.databinding.FragmentTodayFixturesBinding
-import com.mmi.testdemo.di.DaggerCompetitionComponent
+import com.mmi.testdemo.di.DaggerAppComponent
 import javax.inject.Inject
 
 
@@ -32,7 +36,6 @@ class TodayFixturesFragment : Fragment() {
     @Inject
     lateinit var factory: ViewModelProvider.Factory
     private val viewModel: CompetitionsViewModel by viewModels { factory }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -41,7 +44,7 @@ class TodayFixturesFragment : Fragment() {
     override fun onAttach(context: Context) {
         super.onAttach(context)
 
-        DaggerCompetitionComponent.factory().create(coreComponent()).inject(this)
+        DaggerAppComponent.factory().create(coreComponent()).inject(this)
     }
 
     override fun onCreateView(
@@ -81,7 +84,7 @@ class TodayFixturesFragment : Fragment() {
      */
     private fun getTodayMatch(date: String) {
         if (hasInternetConnection(requireContext()))
-            viewModel.getAllMatches(date).observe(viewLifecycleOwner, Observer { result ->
+            viewModel.getAllMatches(date).observe(viewLifecycleOwner, { result ->
                 when (result) {
                     is NetworkStatus.Loading -> {
                         showLoading()
